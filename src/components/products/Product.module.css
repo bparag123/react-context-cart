@@ -1,0 +1,17 @@
+.productItem {
+  position: relative;
+  background-color: aqua;
+  margin-top: 1rem;
+}
+
+.quantityBtns {
+  padding: 0;
+}
+
+.quantityInput {
+  border: 1px solid rgb(236, 137, 137);
+  border-radius: 1rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}

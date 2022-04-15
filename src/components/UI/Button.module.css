@@ -1,0 +1,14 @@
+.button {
+  color: rgb(252, 16, 16);
+  font-weight: bold;
+  background-color: rgb(253, 191, 191);
+  border: 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.button:hover {
+  background-color: brown;
+  color: azure;
+  cursor: pointer;
+}

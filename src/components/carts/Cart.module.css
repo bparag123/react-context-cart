@@ -1,0 +1,12 @@
+.cart-total {
+  text-align: center;
+  background-color: rgb(252, 16, 16);
+  color: white;
+  padding: 1rem;
+  margin: 0 0.5rem;
+}
+
+.close-cart {
+display: flex;
+margin: 0 0.5rem;
+}

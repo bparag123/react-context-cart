@@ -1,0 +1,15 @@
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quantity-text {
+    padding: 1rem;
+}
