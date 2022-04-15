@@ -7,8 +7,9 @@ import classes from './Cart.module.css'
 
 const Cart = (props) => {
 
+    //Subscribing the Context Data of the Cart
     const ctx = useContext(cartContext)
-
+    console.log(ctx);
     const onPlusBtnClick = (item) => {
         ctx.addToCart({ ...item, quantity: 1 })
     }
@@ -21,6 +22,7 @@ const Cart = (props) => {
             <Button onClick={props.onHideCart} className={classes['close-cart']}>Close Cart</Button>
         </div>
         {ctx.items.map((ele) => {
+            //Binding the arguments with the function for adding or removing the cart item
             return ele.quantity > 0 && <Cartitem ele={ele} onPlusBtnClick={onPlusBtnClick.bind(null, ele)} onMinusBtnClick={onMinusBtnClick.bind(null, ele.id)} />
         })}
         <div className={classes['cart-total']}>

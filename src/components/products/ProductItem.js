@@ -6,15 +6,20 @@ import Input from "../UI/Input";
 import classes from "./Product.module.css"
 
 const Productitem = (props) => {
+  //Subscribing the Cart Context Data
+  //Here it is required to add the Product to Cart
   const ctxCart = useContext(cartContext);
-  const selectedProductId = React.useRef(null)
+
+  //This is a reference for the quantity Update
   const quantityInput = React.useRef(null)
 
+  //This effect will run once after component is rendered as i have not defined any dependancy
   useEffect(() => {
     quantityInput.current.value = "1"
   })
 
   const onAddToCartBtn = () => {
+    //Dispatching the action to the Cart Context
     ctxCart.addToCart({ ...props.data, quantity: +quantityInput.current.value })
     quantityInput.current.value = ""
   }
@@ -27,7 +32,7 @@ const Productitem = (props) => {
       <div>
         <Input ref={quantityInput} inputConfig={{ type: "number" }} className={classes.quantityInput} />
       </div>
-      <Button ref={selectedProductId} onClick={onAddToCartBtn}>Add To Cart</Button>
+      <Button onClick={onAddToCartBtn}>Add To Cart</Button>
     </Card>
   );
 };

@@ -3,9 +3,10 @@ import './App.css';
 import Cart from './components/carts/Cart';
 import Header from './components/Header';
 import Productlist from './components/products/ProduclList';
-import Input from './components/UI/Input';
 
 function App() {
+  //Here i will Render the Modal for the Cart as a direct children to the App Component
+  //So managing visibility here
   const [isCartVisible, setCartVisiblity] = useState(false)
 
   const onHideCart = () => {
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <div className="App">
+      {/* This is a Cart Modal */}
       {isCartVisible && <Cart onHideCart={onHideCart} />}
       <Header onShowCart={onShowCart} />
       <Productlist />

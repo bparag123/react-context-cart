@@ -1,9 +1,10 @@
 import React, { createContext } from "react";
 
+//This is a context for the product Data
 const productContext = createContext([
-  { id: "p1", productName: "Shoes", category: "Footware", price: 499 },
-  { id: "p2", productName: "Tennis Ball", category: "Footware", price: 99 },
-  { id: "p3", productName: "Laptop", category: "Footware", price: 999 },
+  { id: "p1", productName: "Shoes", category: "Footware", price: 100 },
+  { id: "p2", productName: "Tennis Ball", category: "Footware", price: 200 },
+  { id: "p3", productName: "Laptop", category: "Footware", price: 300 },
 ]);
 
 export const ProductContextProvider = (props) => {
@@ -11,9 +12,9 @@ export const ProductContextProvider = (props) => {
     <productContext.Provider
       value={{
         data: [
-          { id: "p1", productName: "Shoes", category: "Footware", price: 499 },
-          { id: "p2", productName: "Tennis Ball", category: "Footware", price: 99 },
-          { id: "p3", productName: "Laptop", category: "Footware", price: 999 },
+          { id: "p1", productName: "Shoes", category: "Footware", price: 100 },
+          { id: "p2", productName: "Tennis Ball", category: "Footware", price: 200 },
+          { id: "p3", productName: "Laptop", category: "Footware", price: 300 },
         ],
       }}
     >
