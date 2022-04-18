@@ -9,9 +9,9 @@ const Cartitem = (props) => {
             <p>$ {props.ele.price}</p>
             <p>$ {props.ele.price * props.ele.quantity}</p>
             <div className={classes['quantity']}>
-                <button onClick={props.onPlusBtnClick}>+</button>
-                <p className={classes['quantity-text']}>{props.ele.quantity}</p>
                 <button onClick={props.onMinusBtnClick}>-</button>
+                <p className={classes['quantity-text']}>{props.ele.quantity}</p>
+                <button onClick={props.onPlusBtnClick}>+</button>
             </div>
         </div>
     </Card>

@@ -21,27 +21,34 @@ export const CartProvider = (props) => {
     const addToCart = (item) => {
         dispatchCartAction({
             type: "ADD_TO_CART",
-            item : item
+            item: item
         })
     }
     //Method will be fired when adding the product to cart will be happen
     //This method will distributed to all the components whoever require the Cart Context
     const removeFromCart = (id) => {
         dispatchCartAction({
-            type:"REMOVE_FROM_CART",
-            id:id
+            type: "REMOVE_FROM_CART",
+            id: id
         })
     }
 
+    //Method will be fired when Order is Submitted
+    const clearCart = () => {
+        dispatchCartAction({
+            type: "CLEAR_CART"
+        })
+    }
     //The actual context data which is distributed to all the cart context consumers
     const cartContextData = {
         ...cartData,
         addToCart,
-        removeFromCart
+        removeFromCart,
+        clearCart
         //Here i need to add additional methods for changing the state of the cart
     }
-    
-    
+
+
     return <cartContext.Provider value={cartContextData}>
         {props.children}
     </cartContext.Provider>

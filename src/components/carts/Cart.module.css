@@ -6,6 +6,11 @@
   margin: 0 0.5rem;
 }
 
+.cart-list {
+  max-height: 11rem;
+  overflow: auto;
+}
+
 .close-cart {
 display: flex;
 margin: 0 0.5rem;

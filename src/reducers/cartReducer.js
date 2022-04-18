@@ -32,17 +32,15 @@ const removeFromCartHelper = (state, action) => {
 
     //Delete the product from the cart if it is last removal
     if (existingProduct.quantity === 1) {
-        const modifiedItems = state.items.filter((ele) => {
-            return ele.id !== action.id
-        })
-        return { items: modifiedItems, cartTotal: newTotal }
+        state.items.splice(indexOfProduct, 1)
     }
     //Decreamenting the quantity by 1 
     else {
         existingProduct.quantity--
-        return { items: state.items, cartTotal: newTotal }
     }
+    return { items: state.items, cartTotal: newTotal }
 }
+
 
 //This is a reducer function which is a kind of listener for the dispatch events
 //This is a function which will handle and edit the actual state for the application
@@ -57,6 +55,9 @@ const cartReducer = (state, action) => {
         const removed = removeFromCartHelper(state, action)
         // console.log("removed", removed);
         return removed
+    }
+    else if (action.type === "CLEAR_CART") {
+        return { items: [], cartTotal: 0 }
     }
 }
 
