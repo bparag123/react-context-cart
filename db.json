@@ -3,5 +3,5 @@
           { "id": "p1", "productName": "Shoes", "category": "Footware", "price": "100" },
           { "id": "p2", "productName": "Tennis Ball", "category": "Footware", "price": "200" },
           { "id": "p3", "productName": "Laptop", "category": "Footware", "price": "300" },
-        ]",
+        ]"
 }
